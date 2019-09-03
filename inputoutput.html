@@ -1,0 +1,29 @@
+<html>
+<body>
+
+<p>Click the button to demonstrate the prompt box.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var yearOfBirth = parseInt(prompt("Please enter your year of birth", ), 10);
+  if (yearOfBirth != null) {
+    var ageCategory = "an Elder"
+    var currentYear = new Date().getFullYear()
+    var year = currentYear - yearOfBirth
+    if (year < 18) {
+      ageCategory = "a Minor"
+    } else if (year > 18 && year < 38) {
+      ageCategory = "a Youth"
+    }
+    document.getElementById("demo").innerHTML =
+    "You are " + ageCategory;
+  }
+}
+</script>
+
+</body>
+</html>
